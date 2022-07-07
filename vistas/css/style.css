@@ -1,0 +1,374 @@
+/*=============================================
+GLOBAL
+=============================================*/
+*{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, input, textarea, select, button{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+a:visited, a:link, a:focus, a:hover, a:active{
+	list-style: none;
+	text-decoration: none;
+}
+.fc-today{
+	background: rgba(255, 255, 255, 0) !important;
+}
+
+/*=============================================
+HEADER
+=============================================*/
+
+header{
+	position:fixed;
+	top:0;
+	z-index:3;
+}
+
+header .grid-container{
+	display:grid;
+	grid-template-columns: 3fr 5fr 1fr 1fr 1fr 1fr;
+}
+
+header .grid-item{
+	text-align:center;
+}
+
+header .bloqueReservas{
+	position:relative;
+}
+
+
+header .bloqueReservas .campana-y-reserva{
+	background:#FFFBEE;
+	cursor:pointer;
+}
+
+header .bloqueReservas .fa-concierge-bell{
+	font-size:25px; 
+	color:#847059;
+}
+
+header .bloqueReservas .fa-caret-down, header .bloqueReservas .fa-caret-up{
+	font-size:25px; 
+	color:#d7957c;
+}
+/* reservas inicio */
+header .formReservas{
+	position: absolute;
+    top: 52px;
+    width: 350px;
+    height: auto;
+    left:0px;
+    z-index: 2;
+    background: rgba(215, 149, 124, 0.8);
+}
+
+header .formReservas .input-group-lg input, header .formReservas select{
+	font-size:14px;
+}
+
+header .formReservas input[type="submit"]{
+	background:black;
+	font-size:16px;
+}
+
+header .fa-user{
+	font-size:25px; 
+	color:#DFDAD4;
+	cursor:pointer;
+}
+
+header .botonMenu i{
+	font-size:30px; 
+	color:#B5A99B;
+	cursor:pointer;
+}
+
+/*=============================================
+MENU
+=============================================*/
+nav.menu{
+	position: fixed;
+	z-index:10;
+	top: 60px;
+	background-color: black;
+	display:none;
+}
+
+nav.menu li > .nav-link{
+	transition:.5s all;
+}
+
+nav.menu li:hover > .nav-link{
+	background:#d7957c;
+	transition:.5s all;
+}
+
+.menuMovil{
+	display:none;
+	position:fixed;
+	background: rgba(0,0,0,.8);
+	width:100%;
+	height:90vh;
+	z-index:2;
+	overflow-x: hidden;  
+}
+
+.menuMovil .formReservas input[type="button"]{
+	background:black;
+	font-size:16px;
+}
+
+.menuMovil .formReservas{
+	background: rgba(215, 149, 124, 0.8);
+	position: relative;
+	top:23px;
+}
+
+.menuMovil .nav{
+	background-color: black !important;
+}
+
+/*=============================================
+BANNER
+=============================================*/
+
+.banner .fade-slider{
+	position:relative;
+}
+
+.banner .verMas{
+	position:absolute;
+	width:60px;
+	line-height: 60px;
+  	bottom: 5%;
+    left: 50%;
+    font-size:30px;
+    transform: translate(-50%, 0%);
+    cursor:pointer;
+}
+
+
+/*=============================================
+SERVICIOS
+=============================================*/
+
+.servicios .row div[class*="col"] figure{
+	position:relative;
+	overflow: hidden;
+}
+
+.servicios .row div[class*="col"] figure img{
+	transform: scale(1, 1);
+	transition: 1s all;
+}
+
+.servicios .row div[class*="col"] figure img:hover{
+	transform: scale(1.1, 1.1);
+	transition: 1s all;
+}
+
+.servicios .row div[class*="col"] figure h1{
+	position:absolute;
+	top:45%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	transition:.3s all;
+}
+
+.servicios .row div[class*="col"] figure h1:hover{
+	filter: invert(100%);
+	transition:.3s all;
+}
+
+.servicios .row div[class*="col"] figure p{
+	background:black; 
+	color:#aaa;
+	padding-left:0;
+	padding-right:0;
+}
+
+.servicios .row div[class*="col"] figure h3{
+	background:#d7957c;
+}
+
+.servicios .row div[class*="col"] figure h5{
+	color:#777;
+	text-decoration: none;
+}
+
+/*=============================================
+RECORRIDO GALERIA
+=============================================*/
+
+.recorridoGaleria .grid-container{
+	display:grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.recorridoGaleria .grid-item{
+	text-align:center;
+}
+
+
+.recorridoGaleria .grid-item:nth-child(1){
+	grid-row: 1 / span 1;
+}
+
+.recorridoGaleria .grid-item:nth-child(2){
+	grid-row: 2 / span 1;
+}
+
+.recorridoGaleria .grid-item:nth-child(3){
+	grid-row: 1 / span 2;
+}
+
+/*=============================================
+EQUIPO
+=============================================*/
+
+.fondoEquipo{
+	position:fixed;
+	z-index:-1;
+	top:0;
+	left:0;
+	height:1000px;
+	background-color:white;
+	background-image: url("../img/brush1.jpg");
+	background-position: center top;
+	background-repeat: repeat-y;
+}
+
+.equipo .grid-container{
+	display:grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.equipo .grid-item{
+	text-align:center;
+	color:white;
+}
+
+.equipo .grid-item:nth-child(2){
+	position:relative; 
+	z-index:1;
+	top:-60px; 
+	height:600px;
+	background:#847059;
+}
+
+
+.equipo .carta div[class*="col"]{
+	text-align:center;
+}
+
+.equipo .carta img{
+	border:3px solid white;
+}
+
+.contactenos{
+	position:relative;
+	margin-top:-80px;
+}
+
+
+
+/*=============================================
+FOOTER
+=============================================*/
+
+footer .grid-container{
+	display:grid;
+	grid-template-columns: 2fr 4fr 2fr;
+}
+
+footer .grid-item{
+	background-color: black;
+	text-align:center;
+	color:white;
+}
+
+.redesMovil{
+	visibility: hidden;
+	position: fixed;
+	bottom:0px;
+	z-index:2;
+	width:100%;
+	background: black;
+	
+}
+
+/*=============================================
+SCROLL UP
+=============================================*/
+#scrollUp{
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	background: url(../img/flecha.jpg);
+}
+
+
+/*=============================================
+TABLET VERTICAL (MD revisamos en 768px hacia abajo)
+=============================================*/
+
+@media (max-width:768px){
+
+	header .grid-container{
+		grid-template-columns:4fr 1fr;
+	}
+
+
+	.servicios .row div[class*="col"] figure p{
+		padding-left:4px;
+		padding-right:4px;
+	}
+
+	.recorridoGaleria .grid-container{
+		grid-template-columns: 1fr;
+	}
+
+	.recorridoGaleria .grid-container h1{
+		font-size:30px;
+	}
+
+	.equipo .grid-container{
+		grid-template-columns: 1fr;
+	}
+
+	.equipo h1{
+		font-size:30px;
+	}
+
+	.equipo .grid-item:nth-child(2){
+		height:400px;
+		background:rgba(81, 69, 55, .9);
+	}
+
+	.contactenos input{
+		width:100% !important;
+		margin:10px 0px !important;
+	}
+
+
+	footer .grid-container{
+		grid-template-columns: 1fr;
+		
+	}
+
+	.redesMovil{
+		visibility: visible;
+	}
+
+}
+

@@ -1,0 +1,205 @@
+/*=============================================
+GLOBAL
+=============================================*/
+*{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, input, textarea, select, button{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+a:visited, a:link, a:focus, a:hover, a:active{
+	list-style: none;
+	text-decoration: none;
+}
+
+/*=============================================
+HEADER
+=============================================*/
+
+header{
+	position:fixed;
+	z-index:2;
+}
+
+header .grid-container{
+	display:grid;
+	grid-template-columns: 2fr 6fr 1fr 1fr 1fr 1fr;
+}
+
+header .grid-item{
+	background-color: silver;
+	border:2px solid white;
+	text-align:center;
+	height: 70px;
+}
+
+
+/*=============================================
+BANNER
+=============================================*/
+
+.banner{
+	background-color: silver;
+	border:2px solid white;
+	height:650px;
+}
+
+
+
+/*=============================================
+SERVICIOS
+=============================================*/
+
+.servicios .row div[class*="col"] main{
+	background-color: silver;
+	border:2px solid white;
+	height:400px;
+}
+
+/*=============================================
+RECORRIDO GALERIA
+=============================================*/
+
+.recorridoGaleria .grid-container{
+	display:grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.recorridoGaleria .grid-item{
+	background-color: silver;
+	border:2px solid white;
+	text-align:center;
+}
+
+
+.recorridoGaleria .grid-item:nth-child(1){
+	grid-row: 1 / span 1;
+	height: 220px;
+}
+
+.recorridoGaleria .grid-item:nth-child(2){
+	grid-row: 2 / span 1;
+	height: 220px;
+}
+
+.recorridoGaleria .grid-item:nth-child(3){
+	grid-row: 1 / span 2;
+	height: 440px;
+}
+
+/*=============================================
+EQUIPO
+=============================================*/
+
+.fondoEquipo{
+	position:fixed;
+	z-index:-1;
+	top:0;
+	left:0;
+	height:500px;
+}
+
+.equipo .grid-container{
+	display:grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.equipo .grid-item{
+	background-color: silver;
+	border:2px solid white;
+	text-align:center;
+}
+
+.equipo .grid-item:nth-child(1){
+	height:500px;
+
+}
+
+.equipo .grid-item:nth-child(2){
+	position:relative; 
+	z-index:1;
+	top:-40px; 
+	height:580px;
+}
+
+.equipo .carta div[class*="col"]{
+	background-color: silver;
+	border:2px solid white;
+	text-align:center;
+	height:200px;
+}
+
+
+/*=============================================
+FOOTER
+=============================================*/
+
+footer .grid-container{
+	display:grid;
+	grid-template-columns: 2fr 4fr 2fr;
+}
+
+footer .grid-item{
+	background-color: silver;
+	border:2px solid white;
+	text-align:center;
+	height: 70px;
+}
+
+
+
+/*=============================================
+TABLET VERTICAL (MD revisamos en 768px hacia abajo)
+=============================================*/
+
+@media (max-width:768px){
+
+	header .grid-container{
+		grid-template-columns:4fr 1fr;
+	}
+
+	.banner{
+		height:400px;
+	}
+
+	.planes .grid-container{	
+		grid-template-columns: auto;
+	}
+
+	.planesMovil .grid-container{	
+		grid-template-columns: auto;
+	}
+
+	.planesMovil .grid-item{	
+		background-color: silver;
+		border:2px solid white;
+		text-align:center;
+		height: 450px;
+	}
+
+	.recorridoGaleria .grid-container{
+		grid-template-columns: 1fr;
+	}
+
+	.equipo .grid-container{
+		grid-template-columns: 1fr;
+	}
+
+	.contactenos input{
+		width:100% !important;
+		margin:10px 0px !important;
+	}
+
+	footer .grid-container{
+		grid-template-columns: 1fr;
+	}
+
+}
+
